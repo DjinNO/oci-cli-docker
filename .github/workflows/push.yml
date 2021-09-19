@@ -1,4 +1,4 @@
-name: golang-pipeline
+name: docker-build
 on: push
 jobs:
   deploy:
