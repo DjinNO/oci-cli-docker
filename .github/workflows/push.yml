@@ -6,8 +6,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: debug
-        run: ls -la && pwd
       - name: Build image
         run: docker build . -f Dockerfile -t djinno/oci-cli:latest
       - name: Docker login
