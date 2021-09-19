@@ -4,7 +4,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Build image
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: debug
         run: ls -la && pwd
       - name: Build image
         run: docker build . -f Dockerfile -t djinno/oci-cli:latest
